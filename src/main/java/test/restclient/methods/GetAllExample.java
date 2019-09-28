@@ -1,10 +1,7 @@
 package test.restclient.methods;
 
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-import test.restclient.model.UserDTO;
+import test.restclient.model.User;
 
 import java.util.List;
 
@@ -14,9 +11,9 @@ public class GetAllExample {
     private static final String URL = "http://localhost:8080/rest";
 
     private static class userList {
-        private List<UserDTO> list;
+        private List<User> list;
 
-        public userList(List<UserDTO> list) {
+        public userList(List<User> list) {
             this.list = list;
         }
     }
